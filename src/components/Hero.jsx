@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="banner">
             {
 
-                items && items.length > 0 && items.map(item => (
+                items && items.map(item => (
 
                     <div className="item" key={item.id}>
                         <img src={item.hello} alt="hai" className={`bgImg ${item.active ? 'active' : undefined}`} />
@@ -35,8 +35,8 @@ const Hero = () => {
                             <h1 className='fontStyle'>{item.title}</h1>
                             <p>{item.desc}</p>
                             <div className="buttons">
-                                <button className={item.active ? 'mainButton activeButton': 'mainButton'}>Watch Now</button>
-                                <button className={item.active ? 'mainButton activeButton': 'mainButton'}>Watch Trailer</button>
+                                <button className='mainButton' >Watch Now</button>
+                                <button className='mainButton'>Watch Trailer</button>
                             </div>
                         </div>
                     </div>
