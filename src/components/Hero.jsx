@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../App'
 import './Hero.css'
-import Button from './Button'
-import ButtonList from '../Data/Buttonlist'
+// import Button from './Button'
+// import ButtonList from '../Data/Buttonlist'
 import HeroSwiper from './HeroSwiper'
 
 
@@ -35,11 +35,8 @@ const Hero = () => {
                             <h1 className='fontStyle'>{item.title}</h1>
                             <p>{item.desc}</p>
                             <div className="buttons">
-                                {
-                                    ButtonList.map((butlist) => (
-                                        <Button key={butlist.id} butlist={butlist} />
-                                    ))
-                                }
+                                <button className={item.active ? 'mainButton activeButton': 'mainButton'}>Watch Now</button>
+                                <button className={item.active ? 'mainButton activeButton': 'mainButton'}>Watch Trailer</button>
                             </div>
                         </div>
                     </div>
