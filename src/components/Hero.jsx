@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../App'
 import './Hero.css'
-// import Button from './Button'
-// import ButtonList from '../Data/Buttonlist'
 import HeroSwiper from './HeroSwiper'
 
 
@@ -30,7 +28,7 @@ const Hero = () => {
                 items && items.map(item => (
 
                     <div className="item" key={item.id}>
-                        <img src={item.hello} alt="hai" className={`bgImg ${item.active ? 'active' : undefined}`} />
+                        <img src={item.bgImg} alt="hai" className={`bgImg ${item.active ? 'active' : undefined}`} />
                         <div className={`content ${item.active ? 'active' : undefined}`}>
                             <h1 className='fontStyle'>{item.title}</h1>
                             <p>{item.desc}</p>
