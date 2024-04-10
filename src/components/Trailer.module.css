@@ -1,0 +1,43 @@
+.movieTrailer{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  /* left: -7rem; */
+  width: 100vw;
+  height:100vh;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(185, 181, 181, 0.5);
+  z-index: 1500;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: 1s;
+}
+
+.movieTrailer iframe {
+  max-width: 1200px;
+  max-height: 550px;
+}
+
+.movieTrailer .trailerClose{
+  position: absolute;
+  text-decoration: none;
+  top: 50px;
+  right: 30px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.movieTrailer.active{
+  position: fixed;
+display: flex;
+  opacity: 1;
+  /* visibility: visible; */
+}

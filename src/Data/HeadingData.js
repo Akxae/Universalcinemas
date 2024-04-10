@@ -4,7 +4,7 @@ const HeadingData=[
     {id:'02',
     heading:'Action Movies'},
     {id:'03',
-    heading:'Watch in your Language'},
+    heading:'Choose your Language'},
     {id:'04',
     heading:'Kids and Family'},
     {id:'05',

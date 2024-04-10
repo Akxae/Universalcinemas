@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import React, { useEffect, useState } from 'react';
 import movieListbanner from './Data/HeromovieList'
 import Allmovies from './components/Allmovies';
+import Footer from './components/Footer';
 // import Navbar from './components/Navbar/Navbar';
 
 export const AppContext = React.createContext();
@@ -26,6 +27,7 @@ function App() {
         <Header />
         <Home />
         <Allmovies />
+        <Footer />
       </AppContext.Provider>
 
     </>

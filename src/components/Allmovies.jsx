@@ -10,7 +10,7 @@ function Allmovies() {
   const { items, setItems } = useContext(AppContext);
 
   return (
-    <div>
+    <div style={{marginBottom:'50px'}}>
       <MovieHeading hd={HeadingData} items={items} />  
     </div>
   )

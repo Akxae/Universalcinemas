@@ -1,13 +1,20 @@
+import { useState } from 'react'
 import React, { useContext } from 'react'
 import { AppContext } from '../App'
 import './Hero.css'
 import HeroSwiper from './HeroSwiper'
+import Trailer from './Trailer'
 
 
 
 const Hero = () => {
 
     const { items, setItems } = useContext(AppContext);
+
+    const [Trailerr , setTrailer] = useState(false)
+    const toggletrailer = ()=>{
+        setTrailer(!Trailerr)
+        };
 
     const handleSlideChange = id => {
         const newItems = items.map((item) => {
@@ -34,9 +41,11 @@ const Hero = () => {
                             <p>{item.desc}</p>
                             <div className="buttons">
                                 <button className='mainButton' >Watch Now</button>
-                                <button className='mainButton'>Watch Trailer</button>
+                                <button className='mainButton' onClick={toggletrailer}>Watch Trailer</button>
                             </div>
                         </div>
+                        {item.active && <Trailer item={item} status={Trailerr} toggleTrailer={toggletrailer} />}
+
                     </div>
                 ))
             }
