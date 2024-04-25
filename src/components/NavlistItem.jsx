@@ -1,9 +1,13 @@
 import React from 'react'
 import './NavlistItem.css'
+import { NavLink } from 'react-router-dom'
 
-const NavlistItem = ({nav}) => {
+const NavlistItem = ({name , link}) => {
+
   return (
-    <li><a href="">{nav.name}</a></li>
+    <>
+    <li><NavLink to={link}>{name}</NavLink></li></>
+  
   )
 }
 

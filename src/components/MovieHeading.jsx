@@ -12,7 +12,7 @@ function MovieHeading({ hd, items }) {
                         <h1 className='heading'>{hddata.heading}</h1>
                         <div className='card-container'>
                             <div className='card-closet'>
-                                <MovieCard items={items} hddata={hddata.heading} />
+                            <MovieCard items={items} hddata={hddata.heading} />                               
                             </div>
                         </div>
                     </div>

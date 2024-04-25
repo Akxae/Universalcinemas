@@ -4,6 +4,7 @@ import { AppContext } from '../App'
 import './Hero.css'
 import HeroSwiper from './HeroSwiper'
 import Trailer from './Trailer'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -40,7 +41,8 @@ const Hero = () => {
                             <h1 className='fontStyle'>{item.title}</h1>
                             <p>{item.desc}</p>
                             <div className="buttons">
-                                <button className='mainButton' >Watch Now</button>
+                                <button className='mainButton' >
+                                    <NavLink to={`/Detailes/${item.id}`} > Watch Now</NavLink></button>
                                 <button className='mainButton' onClick={toggletrailer}>Watch Trailer</button>
                             </div>
                         </div>

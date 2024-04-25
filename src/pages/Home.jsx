@@ -1,8 +1,17 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Allmovies from '../components/Allmovies'
 
 const Home = () => {
-  return <Hero />
+  return(
+    <>
+    <Hero />
+    <Allmovies/>
+    </>
+    
+  ) 
+
+
 }
 
 export default Home

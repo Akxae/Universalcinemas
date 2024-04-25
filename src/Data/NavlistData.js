@@ -1,19 +1,23 @@
 const navListData=[
     {
         id:'01',
-        name:'home1'
+        name:'Home',
+        link:'/'
     },
     {
         id:'02',
-        name:'Movies'
+        name:'Movies',
+        link:'/movies'
     },
     {
         id:'03',
-        name:'TV Shows'
+        name:'TV Shows',
+        link:'/Tv-shows'
     },
     {
         id:'04',
-        name:'More'
+        name:'More',
+        link:'/#'
     },
 ]
 export default navListData;

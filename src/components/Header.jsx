@@ -19,7 +19,7 @@ const Header = () => {
                 </a>
                 <ul className='nav'>
                     {navlist.map(nav => (
-                        <NavlistItem key={nav.id} nav={nav} />
+                        <NavlistItem key={nav.id} name={nav.name} link={nav.link} />
                     ))}
                 </ul>
                 <div className='nav-right'>

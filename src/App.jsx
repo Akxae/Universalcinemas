@@ -5,9 +5,14 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import React, { useEffect, useState } from 'react';
 import movieListbanner from './Data/HeromovieList'
-import Allmovies from './components/Allmovies';
 import Footer from './components/Footer';
+import Movies from './pages/Movies';
+import TvShows from './pages/TvShows';
+import { BrowserRouter ,Routes ,Route } from 'react-router-dom';
+import MovieDetails from './pages/MovieDetails';
+
 // import Navbar from './components/Navbar/Navbar';
+
 
 export const AppContext = React.createContext();
 
@@ -24,9 +29,15 @@ function App() {
     <>
       {/* <Navbar/> */}
       <AppContext.Provider value={{items ,setItems}}>
+        <BrowserRouter>
         <Header />
-        <Home />
-        <Allmovies />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/Tv-shows' element={<TvShows />} />
+          <Route path='/Detailes/:id' element={<MovieDetails />}/>
+        </Routes>
+        </BrowserRouter>
         <Footer />
       </AppContext.Provider>
 
